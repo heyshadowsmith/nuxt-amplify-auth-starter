@@ -1,0 +1,18 @@
+{
+  "name": "nuxt-amplify-auth-starter",
+  "version": "1.0.0",
+  "description": "Nuxt Amplify Auth Starter is a starter template for adding Amplify Auth to a Nuxt single page web application.",
+  "author": "Shadow Smith",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "aws-amplify": "^1.2.2",
+    "aws-amplify-vue": "^0.3.2",
+    "nuxt": "^2.0.0"
+  }
+}

@@ -1,1 +1,1 @@
-# nuxt-amplify-auth-starter
+# Nuxt Amplify Auth Starter
