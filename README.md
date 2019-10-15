@@ -1,0 +1,1 @@
+# nuxt-amplify-auth-starter
