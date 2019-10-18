@@ -17,7 +17,7 @@ In order to do this, [head on over to the Amplify docs](https://aws-amplify.gith
 7. When prompted *"Source Directory Path:"*, choose **.** (just a period) since the default Nuxt.js structure doesn't use a **src** directory.
 8. When prompted *"Distribution Directory Path:"*, choose the default **dist**.
 9. When prompted *"Build Command:"*, choose the default `npm.cmd run-script build`.
-10. When prompted *"Start Command:"*, choose the default `npm.cmd run-script serve`.
+10. When prompted *"Start Command:"*, enter `npm.cmd run-script start`.
 11. When prompted *"Do you want to use an AWS profile?"*, choose **Y** and select the profile you want to use.
 
 ## Add Authentication to your project
@@ -25,8 +25,23 @@ In order to do this, [head on over to the Amplify docs](https://aws-amplify.gith
 2. When prompted *"Do you want to use the default authentication and security configuration?"*, choose **Default configuration**.
 3. When prompted *"How do you want users to be able to sign in?"*, choose **Username**.
 4. When prompted *"Do you want to configure advanced settings?"*, choose **No, I am done**.
-5. Run `amplify push` in your terminal.
-6. When prompted *"Are you sure you want to continue?"*, choose **Y**.
 
-## Launch the app
+## Add Hosting for your project
+1. Run `amplify add hosting` in your terminal.
+2. When prompted *Select the environment setup*, choose **DEV (S3 only with HTTP)**.
+The difference between DEV and PROD in this situation is what all resources AWS provisions for your app when you publish it.
+DEV only uses an S3 for hosting your static files; whereas, PROD uses S3 for hosting your static files, CloudFront to deliver your static files through a CDN, and HTTPS.
+3. When prompted *hosting bucket name*, name it whatever you would like or choose the default.
+4. When prompted *index doc for the website*, choose the default.
+5. When prompted *error doc for the website*, choose the default.
+
+## Provisioning your Authentication and Hosting backend services
+1. Run `amplify push` in your terminal.
+2. When prompted *"Are you sure you want to continue?"*, choose **Y**.
+List step takes a few minutes to complete.
+
+## Launch the app for development
 1. Run `npm run dev` in your terminal.
+
+## Deploy the app to Hosting
+1. Run `amplify publish` to auto-build your SPA and upload it to your S3 bucket.
