@@ -13,6 +13,6 @@
   "dependencies": {
     "aws-amplify": "^1.2.2",
     "aws-amplify-vue": "^0.3.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.8"
   }
 }
